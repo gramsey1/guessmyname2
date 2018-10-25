@@ -1,9 +1,11 @@
 package com.company;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 	String[] name = new String [50];
+        name[0]="Dan";
         name[1]= "Val";
         name[2]= "Eden";
         name[3]="Alex";
@@ -53,6 +55,14 @@ public class Main {
         name[47]="Kathleen";
         name[48]="Don";
         name[49]="Jen";
-        name[50]="Mike";
+
+        for (int i = 0; i < name.length; i++){
+            System.out.println(name[i]);
+        }
+        Arrays.sort(name);
+
+        System.out.println("\n" + name[name.length/2]);
+
+        if ()
     }
 }
