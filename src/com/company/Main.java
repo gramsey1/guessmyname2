@@ -1,6 +1,6 @@
 package com.company;
 import java.util.*;
-
+import java.lang.String;
 public class Main {
 
     public static void main(String[] args) {
@@ -55,14 +55,43 @@ public class Main {
         name[47]="Kathleen";
         name[48]="Don";
         name[49]="Jen";
-
+String nombre = ("blank");
         for (int i = 0; i < name.length; i++){
             System.out.println(name[i]);
         }
+        System.out.println("Pick a name above and keep it in your head. I will try to guess the name you are thinking of. Respond to each guess with: closer to a, closer to z, or correct");
         Arrays.sort(name);
 
-        System.out.println("\n" + name[name.length/2]);
 
-        if ()
+        while(!nombre.equalsIgnoreCase("correct")){
+            System.out.println("\n" + "Is your name " + name[name.length/2]);
+            Scanner kbInput1 = new Scanner(System.in);
+            nombre= kbInput1.nextLine();
+
+            if (!nombre.equalsIgnoreCase("closer to a")){
+                String min = name[0];
+                String max = name[name.length / 2];
+                String mid = name[((name.length / 2) / 2) - 1];
+                Scanner kbInput2 = new Scanner(System.in);
+                System.out.println("Is your name " + mid);
+                String first = kbInput2.next();
+            }
+            else if (nombre.equalsIgnoreCase("closer to z")){
+                String min2 = name[((name.length/2)+1)];
+                String max2 = name[((name.length/2)+24)];
+                String mid2 = name[((name.length/2)+37)];
+                Scanner kbInput3 = new Scanner(System.in);
+                System.out.println("Is your name ");
+            }
+            else if (nombre.equalsIgnoreCase("correct")) {
+                //do nothing
+            }
+            else {
+                System.out.println("Say: 'closer to a' or 'closer to z");
+            }
+            }
+
+
+
     }
 }
